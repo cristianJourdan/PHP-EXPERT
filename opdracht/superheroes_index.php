@@ -12,7 +12,7 @@ $database_gegevens = $statement->fetchAll(PDO::FETCH_ASSOC);
 <?php include 'header.php'; ?>
 <?php include 'menu.php'; ?>
 <div class='container'>
-<h4 class="display-4">superheroes's</h4>
+<h4 class="display-4">superheroes</h4>
 <table class='table table-striped'>
     <thead>
         <tr>
@@ -27,6 +27,7 @@ $database_gegevens = $statement->fetchAll(PDO::FETCH_ASSOC);
             <td> <?php echo $superheroes['Alignment'] ?> </td>
             <td>   
                 <a href="superheroes_show.php?id=<?php echo $superheroes['superheroes'] ?>"> bekijken</a>
+                <a href="superheroes_edit.php?id=<?php echo $superheroes['edit'] ?>"> BEWERKEN</a>
                 <a href="superheroes_delete.php?id=<?php echo $superheroes['ID'] ?>"> DELETE</a>
                </td>
         </tr>
